@@ -16,6 +16,9 @@ Python 3
 NumPy for numerical computations
 Matplotlib for visualizing images and training progress
 
+## Data
+Data is obtained from Kaggle https://www.kaggle.com/datasets/oddrationale/mnist-in-csv. This was chosen for simplicity as it has been formatted in csv.
+
 ## Training the Neural Network
 The training process involves gradient descent, an optimization algorithm for minimizing the loss function, which in this case is cross-entropy.
 
@@ -35,3 +38,8 @@ The network undergoes 1000 training iterations, with each iteration consisting o
 ## Results
 Post-training, the model's accuracy is evaluated against a separate test set to assess its generalization capability.
 A random sample of correct and incorrect preditions are printed as images for visualisation purposes
+
+
+## How to Run
+Download data from https://www.kaggle.com/datasets/oddrationale/mnist-in-csv
+Run py script in local environment
