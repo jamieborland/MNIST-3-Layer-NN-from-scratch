@@ -29,8 +29,9 @@ Parameter Update: Adjusts parameters using gradients and a predefined learning r
 Key Parameters
 
 Learning Rate: Controls the step size in the parameter update phase. A properly selected learning rate ensures convergence to a low-loss state without overshooting.
-Execution
+## Execution
 The network undergoes 1000 training iterations, with each iteration consisting of forward propagation, loss computation, backpropagation, and parameter updates.
 
 ## Results
 Post-training, the model's accuracy is evaluated against a separate test set to assess its generalization capability.
+A random sample of correct and incorrect preditions are printed as images for visualisation purposes
