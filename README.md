@@ -1,4 +1,4 @@
-3-Layer Neural Network for MNIST Classification
+# 3-Layer Neural Network for MNIST Classification
 
 This project implements a 3-layer neural network from scratch using NumPy to classify handwritten digits from the MNIST dataset. The network consists of an input layer, two hidden layers, and an output layer, employing ReLU activation for hidden layers and softmax for the output layer.
 
