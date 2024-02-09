@@ -15,3 +15,22 @@ Output Layer: 10 neurons (representing digits 0-9), Softmax activation
 Python 3
 NumPy for numerical computations
 Matplotlib for visualizing images and training progress
+
+## Training the Neural Network
+The training process involves gradient descent, an optimization algorithm for minimizing the loss function, which in this case is cross-entropy.
+
+## Gradient Descent Overview
+
+Initialization: Weights and biases are initialized to small random values.
+Forward Propagation: Computes activations through the network to the output layer.
+Loss Calculation: The cross-entropy loss is calculated between the network output and the true labels.
+Backpropagation: Calculates gradients of the loss with respect to each parameter (weights and biases) through chain rule applications.
+Parameter Update: Adjusts parameters using gradients and a predefined learning rate, optimizing the network's performance.
+Key Parameters
+
+Learning Rate: Controls the step size in the parameter update phase. A properly selected learning rate ensures convergence to a low-loss state without overshooting.
+Execution
+The network undergoes 1000 training iterations, with each iteration consisting of forward propagation, loss computation, backpropagation, and parameter updates.
+
+## Results
+Post-training, the model's accuracy is evaluated against a separate test set to assess its generalization capability.
