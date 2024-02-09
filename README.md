@@ -1,6 +1,6 @@
 # 3-Layer Neural Network for MNIST Classification
 
-This project implements a 3-layer neural network from scratch using NumPy to classify handwritten digits from the MNIST dataset. The network consists of an input layer, two hidden layers, and an output layer, employing ReLU activation for hidden layers and softmax for the output layer.
+This project implements a 3-layer neural network from scratch using NumPy to classify handwritten digits from the MNIST dataset. The network consists of an input layer, two hidden layers, and an output layer, employing ReLU activation for hidden layers and softmax for the output layer. The model has an accuracy of ~ **90%** after 1000 iterations
 
 ## File Navigation
 There are 2 files in this project. A py script which can be run on your local environment, and a jupyter notebook with the outputs of the python script.
@@ -36,10 +36,11 @@ Key Parameters
 
 Learning Rate: Controls the step size in the parameter update phase. A properly selected learning rate ensures convergence to a low-loss state without overshooting.
 ## Execution
-The network undergoes 10000 training iterations, with each iteration consisting of forward propagation, loss computation, backpropagation, and parameter updates.
+The network undergoes 1000 training iterations, with each iteration consisting of forward propagation, loss computation, backpropagation, and parameter updates.
 
 ## Results
 Post-training, the model's accuracy is evaluated against a separate test set to assess its generalization capability.
+The model returns a test accuracy of ~ **90%**, after 1000 iterations
 A random sample of correct and incorrect preditions are printed as images for visualisation purposes
 
 
