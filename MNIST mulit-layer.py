@@ -1,19 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 31 22:01:23 2024
-
-@author: jamie
-"""
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jan 31 11:03:41 2024
-
-@author: jamie
-"""
-
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
@@ -25,11 +9,6 @@ data_np=np.array(data_pd).T
 m,n =data_np.shape
 y_data = data_np[0]
 x_data= data_np[1:n]
-
-input_lyr= 784
-hid_lyr_1 = 256
-hid_lyr_2 = 128
-output_lyr=10
 
 #%%
 def relu(Z):
@@ -126,6 +105,11 @@ def gradient_descent(x, y, iterations, alpha, input_lyr, hid_lyr_1, hid_lyr_2, o
 
 
 #%%
+input_lyr= 784
+hid_lyr_1 = 256
+hid_lyr_2 = 128
+output_lyr=10
+
 w1, b1, w2, b2, w3, b3 = gradient_descent(x_data, y_data, 1000, 0.001, input_lyr, hid_lyr_1, hid_lyr_2, output_lyr)
 
 #%%
@@ -164,37 +148,30 @@ def display_image_with_prediction(index, x_test, y_test, w1, b1, w2, b2, w3, b3)
     print(f"True Label: {y_test[index]}")
     print(f"Predicted Label: {predicted_label[0]}")
 
-
-#%%
-
 def incorrect_predictions_indices(y_test, a3_test):
     predictions = np.argmax(a3_test, axis=0) 
     incorrect_indices = np.where(y_test != predictions)[0]
     return incorrect_indices
 
-
-def display_multiple_images(random_subset, x_test, y_test, w1, b1, w2, b2, w3, b3):
-    for i in random_subset:
-            display_image_with_prediction(i, x_test, y_test, w1, b1, w2, b2, w3, b3)
-            print("\n")  # Optional: Adds space between images for readability
-
-incorrect_indices = incorrect_predictions_indices(y_test, a3_test)
-random_subset = np.random.choice(incorrect_indices, size=10, replace=False)
-display_multiple_images(random_subset, x_test, y_test, w1, b1, w2, b2, w3, b3)
-
-
-#%%
 def correct_predictions_indices(y_test, a3_test):
     predictions = np.argmax(a3_test, axis = 0)
     correct_indices = np.where(y_test == predictions)[0]
     return correct_indices
 
-def display_multiple_images_correct(random_subset_2, x_test, y_test, w1, b1, w2, b2, w3, b3):
-    for i in random_subset_2:
+def display_multiple_images(random_subset, x_test, y_test, w1, b1, w2, b2, w3, b3):
+    for i in random_subset:
         display_image_with_prediction(i, x_test, y_test, w1, b1, w2, b2, w3, b3)
 
+
+#%%
     
 correct_indices = correct_predictions_indices(y_test, a3_test)
-random_subset_2 = np.random.choice(correct_indices, size=10, replace=False)
-display_multiple_images_correct(random_subset_2, x_test, y_test, w1, b1, w2, b2, w3, b3)
+random_subset_2 = np.random.choice(correct_indices, size=5, replace=False)
+display_multiple_images(random_subset_2, x_test, y_test, w1, b1, w2, b2, w3, b3)
+
+
+incorrect_indices = incorrect_predictions_indices(y_test, a3_test)
+random_subset = np.random.choice(incorrect_indices, size=5, replace=False)
+display_multiple_images(random_subset, x_test, y_test, w1, b1, w2, b2, w3, b3)
+
 
