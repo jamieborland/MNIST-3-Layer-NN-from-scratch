@@ -2,6 +2,8 @@
 
 This project implements a 3-layer neural network from scratch using NumPy to classify handwritten digits from the MNIST dataset. The network consists of an input layer, two hidden layers, and an output layer, employing ReLU activation for hidden layers and softmax for the output layer.
 
+## There are 2 files in this project. a py script which can be run on your local machine, and a jupyter notebook with the outputs of the python script.
+
 ## Project Overview
 
 The MNIST dataset comprises 28x28 pixel grayscale images of handwritten digits (0 through 9). This neural network aims to accurately predict the digit represented in each image. The model is built entirely using NumPy to demonstrate understanding of neural network concepts and operations without relying on high-level frameworks like TensorFlow or PyTorch.
